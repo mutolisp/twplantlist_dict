@@ -47,6 +47,7 @@
 </d:entry>
 <d:entry id="Lycopodium_annotinum" d:title="Lycopodium annotinum">
     <d:index d:value="Lycopodium annotinum"/>
+    <d:index d:value="杉葉蔓石松"/>
     <h1><i>Lycopodium annotinum L.</i> </h1>
         LYCOPODIACEAE<br/>
         杉葉蔓石松<br/>
@@ -61,6 +62,7 @@
 </d:entry>
 <d:entry id="Lycopodium_carinatum" d:title="Lycopodium carinatum">
     <d:index d:value="Lycopodium carinatum"/>
+    <d:index d:value=""/>
     <h1><i>Lycopodium carinatum Desv.</i> </h1>
         LYCOPODIACEAE<br/>
         覆葉石松<br/>
@@ -59923,63 +59925,85 @@ Holarrhena pubescens	止瀉木
 </d:entry>
 <d:entry id="FAGACEAE" d:title="FAGACEAE">
     <d:index d:value="FAGACEAE"/>
-    <h1>FAGACEAE</h1>
-        <p>
-        Castanea mollissima	板栗
-Castanopsis cuspidata var. carlesii	長尾尖葉櫧
-Castanopsis cuspidata var. carlesii f. sessilis	單刺苦櫧
-Castanopsis eyrei	反刺苦櫧
-Castanopsis fabri	星刺栲
-Castanopsis fargesii	火燒柯
-Castanopsis formosana	台灣苦櫧
-Castanopsis indica	印度苦櫧
-Castanopsis kawakamii	大葉苦櫧
-Castanopsis kusanoi	細刺苦櫧
-Cyclobalanopsis championii	嶺南青剛櫟
-Cyclobalanopsis gilva	赤皮
-Cyclobalanopsis glauca	青剛櫟
-Cyclobalanopsis glauca var. kuyuensis	谷園青剛櫟
-Cyclobalanopsis globosa	圓果青剛櫟
-Cyclobalanopsis globosa f. chiapautaiensis	佳保台圓果青剛櫟
-Cyclobalanopsis hypophaea	灰背櫟
-Cyclobalanopsis longinux	錐果櫟
-Cyclobalanopsis longinux var. kuoi	郭氏錐果櫟
-Cyclobalanopsis longinux var. lativiolaciifolia	紫背錐果櫟
-Cyclobalanopsis morii	赤柯
-Cyclobalanopsis myrsinifolia	黑櫟
-Cyclobalanopsis pachyloma	捲斗櫟
-Cyclobalanopsis repandifolia	波葉櫟
-Cyclobalanopsis salicina	白背櫟
-Cyclobalanopsis sessilifolia	毽子櫟
-Cyclobalanopsis stenophylloides	狹葉櫟
-Fagus hayatae	台灣水青岡
-Limlia uraiana	烏來柯
-Lithocarpus amygdalifolius	杏葉石櫟
-Lithocarpus lepidocarpus	鬼石櫟
-Pasania chiaratuangensis	加拉段柯
-Pasania cornea	後大埔石櫟
-Pasania dodoniifolia	柳葉石櫟
-Pasania formosana	台灣石櫟
-Pasania glabra	子彈石櫟
-Pasania hancei var. arisanensis	阿里山三斗石櫟
-Pasania hancei var. ternaticupula	三斗石櫟
-Pasania harlandii	短尾葉石櫟
-Pasania kawakamii	大葉石櫟
-Pasania konishii	油葉石櫟
-Pasania nantoensis	南投石櫟
-Pasania shinsuiensis	浸水營石櫟
-Pasania synbalanos	菱果石櫟
-Pasania taitoensis	台東石櫟
-Quercus aliena	槲櫟
-Quercus aliena var. acutiserrata	孛孛櫟
-Quercus dentata	槲樹
-Quercus glandulifera var. brevipetiolata	思茅櫧櫟
-Quercus spinosa	高山櫟
-Quercus suber	西班牙栓皮櫟
-Quercus tarokoensis	太魯閣櫟
-Quercus tatakaensis	銳葉高山櫟
-Quercus variabilis Bl.	栓皮櫟
-Pasania hancei var. ternaticupula f. subreticulata	細葉三斗石櫟
+    <d:index d:value="殼斗科"/>
+    <h1>FAGACEAE 殼斗科</h1>
+            <p>
+            LIAO, JIH-CHING (廖日京)<br/>
+            <br/>
+            Evergreen or deciduous trees or shrubs. Leaves usually alternate, rarely opposite or whorled, simple, entire, wavy, serrate, echinate or cleft, petiolate; stipules caducous, pinnately veined, glabrous or tomentose beneath. Plants are monoecious, flowers small, apetalous; staminate flowers in spikes (catkins) or heads, with 4-7-lobed perianth; stamens 3-12 or more, anthers glabrous or hairy, 2-celled, longitudinally dehiscent; reduced ovary present or not; pistillate flowers solitary or 3-4-clustered, usually in short spikes, sometimes at the base of staminate catkins, with 4-8-lobed perianth adnate to the ovary; ovary 3-7-celled, placentation axile, ovules 2 in each cell, but only 1 in the ripened ovary, styles 3-10, rarely 1-2, usually as many as cells, stigmas pointed or enlarged with flat or tuberculate portion. Nuts ovoid, oblong, depressed-globose or 3-angled, enclosed partly or wholly in a cupule (involucre), glabrous or hairy or winged; cupules regularly or irregularly dehiscent or not, covered with imbricate scales, scales free or united into 6-11 concentric rings, smooth, muricate, tomentose or long-spined, spines simple or branched, hard or soft, often tuberculate-scaled; seed usually solitary by abortion, without endosperm, cotyledons 2, fleshy.<br/>
+            <br/>
+            Widely distributed in tropical, subtropical and temperate regions of the northern hemisphere, one genus in the southern hemisphere; about 10 genera and 600 species worldwide, eight genera with 59 taxa (including 40 native spp., six introduced spp., nine native vars., one introduced var. and three native forms) in Taiwan.
+            </p>
+            <div>
+            LITERATURE
+            <ol>
+                <li>Hsu, Y. C. and H. W. Jen 1975. The classification and Distribution of Fagaceae of Yunnan Province (I.). Act. Phytotax. Sinica 13(4): 9-26. pl. 2-f. 3. pl. 3-f. 2. pl. 5-f. 3. pl. 10-f. 1.</li>
+                <li>Hsu, Y. C. and H. W. Jen 1976. The classification and Distribution of Fagaceae of Yunnan Province (II.). Act. Phytotax. Sinica 14(2): 77-88. pl. 10-f. 4. pl. 16-f. 1.</li>
+                <li>Li, H. L. 1953. Taxonomic notes on the Fagaceae of Formosa. Bulletin of the Torrey, Botanical Club 80(4): 317-324. Pennsylvania, U. S. A.</li>
+                <li>Liao, J. C. 1994. The Taxonomic Revisions of the Family Fagaceae in Taiwan (ed II.). College of Agriculture, National Taiwan University. Pp. 242.</li>
+                <li>Lin, W. F. and T. Liu 1965. Studies on the classification of Fagaceae in Taiwan. Bulletin of Taiwan Forest Research Institute (110): 1-59. 2. pl. 1. f. 1.</li>
+                <li>Nakai, T. 1939. Castanopsis, Pasania and their allies in the Japanese Empire (I. II.) J. Jap. Bot. 15(4): 185-204. 15(5): 257-276.</li>
+                <li>Suzuki, H. 1931. On the determination of Formosan species of Fagaceae, basing on the Morphological characters of the leaves (with 5 plates). Silvia 2(2): 1-30. 51-82.</li>
+            </ol>
+            </div>
+            <p>
+            <b>Species list</b><br/>
+            <br/>
+            Castanea mollissima	板栗<br/>
+            <a href="x-dictionary:r:Castanopsis_cuspidata_var._carlesii">Castanopsis cuspidata var. carlesii</a>	長尾尖葉櫧<br/>
+            <a href="x-dictionary:r:Castanopsis_cuspidata_var._carlesii_f._sessilis">Castanopsis cuspidata var. carlesii f. sessilis</a>	單刺苦櫧<br/>
+            Castanopsis eyrei	反刺苦櫧<br/>
+            Castanopsis fabri	星刺栲<br/>
+            Castanopsis fargesii	火燒柯<br/>
+            Castanopsis formosana	台灣苦櫧<br/>
+            Castanopsis indica	印度苦櫧<br/>
+            Castanopsis kawakamii	大葉苦櫧<br/>
+            Castanopsis kusanoi	細刺苦櫧<br/>
+            Cyclobalanopsis championii	嶺南青剛櫟<br/>
+            Cyclobalanopsis gilva	赤皮<br/>
+            Cyclobalanopsis glauca	青剛櫟<br/>
+            <a href="x-dictionary:r:Cyclobalanopsis_glauca_var._kuyuensis">Cyclobalanopsis glauca var. kuyuensis</a>	谷園青剛櫟<br/>
+            Cyclobalanopsis globosa	圓果青剛櫟<br/>
+            <a href="x-dictionary:r:Cyclobalanopsis_glauca_var._chiapautaiensis">Cyclobalanopsis globosa f. chiapautaiensis</a>	佳保台圓果青剛櫟<br/>
+            Cyclobalanopsis hypophaea	灰背櫟<br/>
+            Cyclobalanopsis longinux	錐果櫟<br/>
+            <a href="x-dictionary:r:Cyclobalanopsis_longinux_var._kuoi">Cyclobalanopsis longinux var. kuoi</a>	郭氏錐果櫟<br/>
+            <a href="x-dictionary:r:Cyclobalanopsis_longinux_var._lativiolaciifolia">Cyclobalanopsis longinux var. lativiolaciifolia</a>	紫背錐果櫟<br/>
+            Cyclobalanopsis morii	赤柯<br/>
+            Cyclobalanopsis myrsinifolia	黑櫟<br/>
+            Cyclobalanopsis pachyloma	捲斗櫟<br/>
+            Cyclobalanopsis repandifolia	波葉櫟<br/>
+            Cyclobalanopsis salicina	白背櫟<br/>
+            Cyclobalanopsis sessilifolia	毽子櫟<br/>
+            Cyclobalanopsis stenophylloides	狹葉櫟<br/>
+            Fagus hayatae	台灣水青岡<br/>
+            Limlia uraiana	烏來柯<br/>
+            Lithocarpus amygdalifolius	杏葉石櫟<br/>
+            Lithocarpus lepidocarpus	鬼石櫟<br/>
+            Pasania chiaratuangensis	加拉段柯<br/>
+            Pasania cornea	後大埔石櫟<br/>
+            Pasania dodoniifolia	柳葉石櫟<br/>
+            Pasania formosana	台灣石櫟<br/>
+            Pasania glabra	子彈石櫟<br/>
+            <a href="x-dictionary:r:Pasania_hancei_var._arisanensis">Pasania hancei var. arisanensis</a>	阿里山三斗石櫟<br/>
+            <a href="x-dictionary:r:Pasania_hancei_var._ternaticupula">Pasania hancei var. ternaticupula</a>	三斗石櫟<br/>
+            Pasania harlandii	短尾葉石櫟<br/>
+            Pasania kawakamii	大葉石櫟<br/>
+            Pasania konishii	油葉石櫟<br/>
+            Pasania nantoensis	南投石櫟<br/>
+            Pasania shinsuiensis	浸水營石櫟<br/>
+            Pasania synbalanos	菱果石櫟<br/>
+            Pasania taitoensis	台東石櫟<br/>
+            Quercus aliena	槲櫟<br/>
+            Quercus aliena var. acutiserrata	孛孛櫟<br/>
+            Quercus dentata	槲樹<br/>
+            Quercus glandulifera var. brevipetiolata	思茅櫧櫟<br/>
+            Quercus spinosa	高山櫟<br/>
+            Quercus suber	西班牙栓皮櫟<br/>
+            Quercus tarokoensis	太魯閣櫟<br/>
+            Quercus tatakaensis	銳葉高山櫟<br/>
+            Quercus variabilis Bl.	栓皮櫟<br/>
+            Pasania hancei var. ternaticupula f. subreticulata	細葉三斗石櫟<br/>
         </p>
 </d:entry>
 <d:entry id="GLEICHENIACEAE" d:title="GLEICHENIACEAE">
