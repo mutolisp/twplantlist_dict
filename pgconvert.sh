@@ -5,25 +5,48 @@ DICTNAME=FloraTaiwan2
 #backup first
 #cp ${DICTNAME}.xml ${DICTNAME}.xml.bak
 
+if [ -d /tmp/f ] ; then
+    echo "/tmp/f exists"
+else
+    mkdir /tmp/f ; chmod 777 /tmp/f
+fi
+
+if [ -d /tmp/g ] ; then
+    echo "/tmp/g exists"
+else
+    mkdir /tmp/g ; chmod 777 /tmp/g
+fi
+
 #backup dictionary entry before empty it 
 cp dict_entry dict_entry.bak
-#clear dict_entry
+#clear dict_entry, gen, fam entries
 :> dict_entry
+:> dict_gen_entry
+:> dict_fam_entry
 
-for (( i = 1 ; i <= 4605 ; i++)); 
+for (( i = 1 ; i <=4605  ; i++)); 
 do
- for j in sc_name family simple_sc zh_name zh_name2 zh_name3
+ for j in sc_name family simple_sc zh_name zh_name2 zh_name3 collection description synonyms
     do
      # extract data from pgsql database
      if [ ${j} = simple_sc ]; then
-        psql -d flora_taiwan -q -c "COPY (SELECT ${j} from namelist where sn=${i}) TO '/tmp/${j}' NULL AS 'null';"
+        psql -d flora_taiwan -q -c "COPY (SELECT ${j} from namelist where sn=${i}) TO '/tmp/${j}' WITH NULL AS 'nodata';"
         simple_sc=`cat /tmp/${j}`
         itemid=`sed -e 's/\ /_/g' /tmp/${j}`
      elif [ ${j} = sc_name ]; then
-        psql -d flora_taiwan -q -c "COPY (SELECT ${j} from namelist where sn=${i}) TO '/tmp/${j}' NULL AS 'null';"
+        psql -d flora_taiwan -q -c "COPY (SELECT ${j} from namelist where sn=${i}) TO '/tmp/${j}' WITH NULL AS 'nodata';"
         sc_name=`cat /tmp/${j}`
+     elif [ ${j} = description ]; then
+        psql -d flora_taiwan -q -c "COPY (SELECT ${j} from namelist where sn=${i}) TO '/tmp/${j}' WITH NULL AS 'nodata';"
+        description=`cat /tmp/${j}`
+     elif [ ${j} = collection ]; then
+        psql -d flora_taiwan -q -c "COPY (SELECT ${j} from namelist where sn=${i}) TO '/tmp/${j}' WITH NULL AS 'nodata';"
+        collection=`cat /tmp/${j}`
+     elif [ ${j} = synonyms ]; then
+        psql -d flora_taiwan -q -c "COPY (SELECT ${j} from namelist where sn=${i}) TO '/tmp/${j}' WITH NULL AS 'nodata';"
+        synonyms=`cat /tmp/${j}`
      else
-        psql -d flora_taiwan -q -c "COPY (SELECT ${j} from namelist where sn=${i}) TO '/tmp/${j}' NULL AS 'null';"
+        psql -d flora_taiwan -q -c "COPY (SELECT ${j} from namelist where sn=${i}) TO '/tmp/${j}' WITH NULL AS 'nodata';"
         export `echo ${j}`=`cat /tmp/${j}`
      fi
 
@@ -49,7 +72,12 @@ do
          all_zhname=`cat /tmp/zh_name`
          zh_name_value="<d:index d:value=\"${all_zhname}\"/>"
      fi
+     
+     # check description, collection and synonyms
+     
+
     done
+     
 
 echo "${i} - [${family}] (${simple_sc}, ${zh_name})"
 cat >> dict_entry << _EOF
@@ -59,14 +87,19 @@ cat >> dict_entry << _EOF
     <h1><i>${sc_name}</i> </h1>
         科名：${family}<br/>
         漢名：${all_zhname}<br/>
+        <br/>
         <div>
-        Synonyms<br/>
+        <u>Synonyms</u><br/>
         </div>
         <p> 
-        <b>Description</b> <br/>
+        <u>Description</u> <br/>
+        <br/>
+        `echo -e ${description}`
         </p>
         <p> 
-        <b>Specimen collections</b> <br/>
+        <u>Specimen collections</u> <br/>
+        <br />
+        `echo -e ${collection}`
         </p>
 </d:entry>
 _EOF
@@ -79,23 +112,19 @@ for fam in `cat family`
 do
   
  # select all of the species
-  psql -d flora_taiwan -q -c "COPY (SELECT simple_sc,zh_name from namelist where family='${fam}') TO '/tmp/f/${fam}' DELIMITER AS ',' CSV QUOTE AS '\"';"
+  psql -d flora_taiwan -q -c "COPY (SELECT simple_sc,zh_name from namelist where family='${fam}') TO '/tmp/f/${fam}' DELIMITER AS ',';"
   family_species=`cat /tmp/f/${fam}`
-  for x in `ls /tmp/f/`
-  do
-      cat ${x} | sed -e :x -e '$!N;s/\n/<br\/>\n/;tx'
-  done
- # select Chinese name  
+  echo "Processing ${fam}..."
 
-# cat >> dict_fam_entry << _EOF
-# <d:entry id="${i}" d:title="${i}">
-#     <d:index d:value="${i}"/>
-#     <h1>${i}</h1>
-#         <p>
-#         ${family_species}
-#         </p>
-# </d:entry>
-# _EOF
+cat >> dict_fam_entry << _EOF
+<d:entry id="${fam}" d:title="${fam}">
+     <d:index d:value="${fam}"/>
+     <h1>${fam}</h1>
+         <p>
+         ${family_species}
+         </p>
+</d:entry>
+_EOF
 
 done
 
@@ -103,26 +132,25 @@ done
 # find genus
 ######
 
-for gen in `cat /tmp/genus`
-do
-  
- # select all of the species
-  psql -d flora_taiwan -q -c "COPY (SELECT simple_sc,zh_name from namelist where genus='${gen}' order by family) TO '/tmp/g/${gen}' 
-  DELIMITER AS ' ';"
-  family_species=`cat /tmp/g/${gen}`
+#psql -d flora_taiwan -q -c "COPY (SELECT genus from namelist GROUP BY genus) TO '/tmp/genus';"
 
-cat >> dict_genus_entry << _EOF
+for gen in `cat genus` 
+    do 
+        psql -d flora_taiwan -c -q "COPY (SELECT simple_sc,zh_name FROM namelist WHERE genus='${gen}') TO '/tmp/g/${gen}';";
+        gen_species=`cat /tmp/g/${gen}`
+        echo "Processing ${gen}..."
+
+cat >> dict_gen_entry << _EOF
 <d:entry id="${gen}" d:title="${gen}">
     <d:index d:value="${gen}"/>
-    <h1>${gen}</h1>
+    <d:index d:value="${gen}屬"/>    <h1>${gen}</h1>
         <p>
-        ${family_species}
+        ${gen_species}
         </p>
 </d:entry>
 _EOF
 
 done
-
 
 
 # combine xml header and dictionary entries (each species, family, genus)
@@ -164,4 +192,8 @@ cat > fb_matter << _EOF
 </d:dictionary>
 _EOF
 
-cat xmlschema dict_entry fb_matter > ${DICTNAME}.xml
+sed -i "" 's/&/&amp;/g' dict_entry
+
+echo "Preprocess done! Compile ${DICTNAME} dictionary"
+cat xmlschema dict_entry dict_fam_entry dict_gen_entry fb_matter > ${DICTNAME}.xml
+make; make install
