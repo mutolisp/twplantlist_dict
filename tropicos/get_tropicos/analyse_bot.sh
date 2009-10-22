@@ -1,11 +1,12 @@
 #!/usr/bin/env bash 
 #namelist=namelist.csv
 namelist=1_2k
+:> Z_tropicos_names
 i=1
 for s in `cat ${namelist} | awk -F',' '{ print $3}'`
     do 
     # eliminate strange ^H
-    #sed -i "" s'/_//g' ${i}.txt
+    sed -i "" s'/_/ /g' ${i}.txt
     # check conditions: 1. no records 2. exactly 3.multiple records
     echo "######## BEGIN of ${i} ########"
     ##### NO RECORDS #######
@@ -23,8 +24,6 @@ for s in `cat ${namelist} | awk -F',' '{ print $3}'`
         family=`cat ${namelist} | grep ${s} | awk -F',' '{print $2}'`
         # if there are multiple results, get the correct one,  "!"
         if [ `grep ${family} ${i}.txt | grep ! | wc -l` -eq 1 ]; then
-            tropicos_raw=`cat ${i}.txt | grep ${family} | grep !`
-            tropicos_fam=`echo ${tropicos_raw} | awk '{ print $1 }'`
             # process with var.
             # if [ `cat ${i}.txt | grep ${family}.txt | grep " var. " | wc -l` -eq 1 \
             #      -o `cat ${i}.txt | grep ${family}.txt | grep " subsp. " | wc -l` -eq 1  \
@@ -51,33 +50,47 @@ for s in `cat ${namelist} | awk -F',' '{ print $3}'`
             #       echo ${author}, ${publish}, ${year}
             #      # tropicos=`echo ${tropicos_raw} | awk '{ print $3, $4 }'`
             # fi
+                echo "Condition 2.1"
+                tropicos_raw=`cat ${i}.txt | grep ${family} | grep !`
+                tropicos=`echo ${tropicos_raw} | awk '{ print $3, $4}'`
+                tropicos_fam=`echo ${tropicos_raw} | awk '{ print $1 }'`
+                str_leng=`echo "${tropicos_raw}" | wc -w`
+                tr_num=`echo ${str_leng}-1 | bc -l`
+                publish_raw=`echo ${tropicos_raw} | awk '{ for (i=5;i<"'"${tr_num}"'";i++ ) { print $i }}' | sed -e :x -e '$!N;s/\n/ / ;tx'`
+                year=`echo ${tropicos_raw} | awk '{ print $"'"${str_leng}"'" }'`
+                echo $
         else
             # check var and subsp
             if [ `echo ${s} | awk -F',' '{print $3}' | grep "+var." | wc -l` -eq 1 ] && [ `echo ${s} | awk -F',' '{print $3}' | grep "+subsp." | wc -l` != 1] ; then
+                echo "Condition 2.2"
                 tropicos_raw=`cat ${i}.txt | grep ${family} | awk 'NR == 1'`
                 tropicos=`echo ${tropicos_raw} | awk '{ print $2, $3, $4, $5}'`
+                tropicos_fam=`echo ${tropicos_raw} | awk '{ print $1 }'`
                 str_leng=`echo "${tropicos_raw}" | wc -w`
                 tr_num=`echo ${str_leng}-1 | bc -l`
-                author_publish=`echo ${tropicos} | awk '{ for (i=6;i<"'"${tr_num}"'";i++ ) { print $i }}' | sed -e :x -e '$!N;s/\n/ / ;tx'`
-                year=`echo ${tropicos} | awk '{print $"'"${str_leng}"'" }'`
+                publish_raw=`echo ${tropicos_raw} | awk '{ for (i=6;i<"'"${tr_num}"'";i++ ) { print $i }}' | sed -e :x -e '$!N;s/\n/ / ;tx'`
+                year=`echo ${tropicos_raw} | awk '{print $"'"${str_leng}"'" }'`
             elif [ `echo ${s} | awk -F',' '{print $3}' | grep "+subsp." | wc -l` -eq 1 ] && [`echo ${s} | awk -F',' '{print $3}' | grep "+var." | wc -l` != 1] ; then
+                echo "Condition 2.3"
                 tropicos_raw=`cat ${i}.txt | grep ${family} | awk 'NR == 1'`
                 tropicos=`echo ${tropicos_raw} | awk '{ print $2, $3, $4, $5}'`
+                tropicos_fam=`echo ${tropicos_raw} | awk '{ print $1 }'`
                 str_leng=`echo "${tropicos_raw}" | wc -w`
                 tr_num=`echo ${str_leng}-1 | bc -l`
-                author_publish=`echo ${tropicos} | awk '{ for (i=6;i<"'"${tr_num}"'";i++ ) { print $i }}' | sed -e :x -e '$!N;s/\n/ / ;tx'`
-                year=`echo ${tropicos} | awk '{ print $"'"${str_leng}"'" }'`
+                publish_raw=`echo ${tropicos_raw} | awk '{ for (i=6;i<"'"${tr_num}"'";i++ ) { print $i }}' | sed -e :x -e '$!N;s/\n/ / ;tx'`
+                year=`echo ${tropicos_raw} | awk '{ print $"'"${str_leng}"'" }'`
             else
+                echo "Condition 2.4"
                 tropicos_raw=`cat ${i}.txt | grep ${family} | awk 'NR == 1'`
                 tropicos=`echo ${tropicos_raw} | awk '{ print $2, $3}'`
+                tropicos_fam=`echo ${tropicos_raw} | awk '{ print $1 }'`
                 str_leng=`echo "${tropicos_raw}" | wc -w`
                 tr_num=`echo ${str_leng}-1 | bc -l`
-                author_publish=`echo ${tropicos} | awk '{ for (i=4;i<"'"${tr_num}"'";i++ ) { print $i }}' | sed -e :x -e '$!N;s/\n/ / ;tx'`
+                publish_raw=`echo ${tropicos_raw} | awk '{ for (i=4;i<"'"${tr_num}"'";i++ ) { print $i }}' | sed -e :x -e '$!N;s/\n/ / ;tx'`
                 year=`echo ${tropicos_raw} | awk '{ print $"'"${str_leng}"'" }'`
             fi
             #tropicos_fam=`echo ${tropicos_raw} | awk '{ print $1 }'`
             #tropicos=`echo ${tropicos_raw} | awk '{ print $2, $3}'`
-            publish=${author_publish}
         fi
     ###### Match our scientific name #####
     elif [ `grep "Records" ${i}.txt | wc -l` -eq 0 ]; then
@@ -102,7 +115,7 @@ for s in `cat ${namelist} | awk -F',' '{ print $3}'`
         # for example, Hypericum nokoense Ohwi
         ########
 
-        name=`cat ${i}.txt | grep "Print-friendly page view     Decrease font" |  awk -F'Print-friendly' '{ print $1}'`
+        name=`cat ${i}.txt | grep " Print-friendly page view     Decrease font" |  awk -F'Print-friendly page view' '{ print $1}'`
         tropicos=`echo ${name} | awk '{ print $1, $2}'`
 
         ##### BEGIN of check author ######
@@ -140,7 +153,7 @@ for s in `cat ${namelist} | awk -F',' '{ print $3}'`
 
         #####
         # Extract
-        publish_raw=`cat ${i}.txt | grep "Published In" | awk -F'Published In: ' '{ print $2 }' | awk -F'Name publication detail' '{print $1}'`
+        publish_raw=`cat ${i}.txt | grep "Published In" | awk -F'Published In: ' '{ print $2 }' | awk -F' Name publication detail ' '{print $1}'`
 
         #psql -d flora_taiwan -q -c "UPDATE namelist SET tropicos_fam='${tropicos_fam}', tropicos='', 
         #            author='${author}', publish='', year='' "
@@ -149,6 +162,6 @@ for s in `cat ${namelist} | awk -F',' '{ print $3}'`
     fi
     #echo "\"${i}\",\"${tropicos}\",\"${s}\"" >> CORRECT_NAMES
     echo "\"${i}\", \"${family}\", \"${tropicos_fam}\", \"${tropicos}\", \"${author}\", \"${publish_raw}\",\"${year}\"" >> Z_tropicos_names
-    echo "######### END of ${i} ##############"
+    echo "######### END of ${i} ##############" 
     let i+=1
-done
+done  
