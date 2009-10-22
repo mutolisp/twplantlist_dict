@@ -1,7 +1,41 @@
 #!/usr/bin/env bash 
 #namelist=namelist.csv
+
+find_multiple_records() {
+#### following is the dirty method _D_ 2009.10.22
+D_base=`cat ${i}.txt | grep Family`
+D_base_line=`grep -n "Family" ${i}.txt | awk -F':' '{print $1}'`
+D_scbase_line=`echo ${D_base_line}+1 | bc -l`
+######  1. obtain family name
+D_fam_number=`cat ${i}.txt | grep Family | awk -F'!' '{print $1}' | wc -c`
+D_fam_end=`echo ${D_fam_number}-2 | bc -l`
+tropicos_fam=`cat ${i}.txt | awk 'NR=="'"${D_scbase_line}"'"' | cut -b 1-${D_fam_end}`
+######  2. obtain scientific name
+D_author_number=`cat ${i}.txt | grep Family | awk -F'Author' '{print $1}' | wc -c`
+D_scname_begin=`echo ${D_fam_number}+2 | bc -l`
+D_scname_end=`echo ${D_author_number}-1 | bc -l`
+tropicos=`cat ${i}.txt | awk 'NR=="'"${D_scbase_line}"'"' | cut -b ${D_scname_begin}-${D_scname_end} | awk '{ print $1, $2, $3, $4}' | sed -e 's/  //g'`
+###### 3. obtain author name
+D_ref_number=`cat ${i}.txt | grep Family | awk -F'Reference' '{print $1}' | wc -c`
+D_author_end=`echo ${D_ref_number}-1 | bc -l`
+author=`cat ${i}.txt | awk 'NR=="'"${D_scbase_line}"'"' | cut -b ${D_author_number}-${D_author_end} | sed -e 's/  //g'`
+###### 4. Get the reference
+D_date_number=`cat ${i}.txt | grep Family | awk -F'Date' '{print $1}' | wc -c`
+D_ref_end=`echo ${D_date_number}-1 | bc -l`
+publish_raw=`cat ${i}.txt | awk 'NR=="'"${D_scbase_line}"'"' | cut -b ${D_ref_number}-${D_ref_end} | sed -e 's/  //g'`
+###### 5. Get the date
+D_date_begin=`echo ${D_date_number} | bc -l`
+D_date_end=`echo ${D_date_number}+3 | bc -l`
+year=`cat ${i}.txt | awk 'NR=="'"${D_scbase_line}"'"' | cut -b ${D_date_begin}-${D_date_end}`
+}
+
+
+
 namelist=1_2k
 :> Z_tropicos_names
+
+
+
 i=1
 for s in `cat ${namelist} | awk -F',' '{ print $3}'`
     do 
@@ -35,25 +69,20 @@ for s in `cat ${namelist} | awk -F',' '{ print $3}'`
                 ######  2. obtain scientific name
                 D_author_number=`cat ${i}.txt | grep Family | awk -F'Author' '{print $1}' | wc -c`
                 D_scname_begin=`echo ${D_fam_number}+2 | bc -l`
-                D_scname_end=`echo ${D_author_number}-2 | bc -l`
-                tropicos=`cat ${i}.txt | awk 'NR=="'"${D_scbase_line}"'"' | \
-                    cut -b ${D_scname_begin}-${D_scname_end} | \
-                    awk '{ print $1, $2, $3, $4}' | sed -e 's/  //g'`
+                D_scname_end=`echo ${D_author_number}-1 | bc -l`
+                tropicos=`cat ${i}.txt | awk 'NR=="'"${D_scbase_line}"'"' | cut -b ${D_scname_begin}-${D_scname_end} | awk '{ print $1, $2, $3, $4}' | sed -e 's/  //g'`
                 ###### 3. obtain author name
                 D_ref_number=`cat ${i}.txt | grep Family | awk -F'Reference' '{print $1}' | wc -c`
-                D_author_begin=`echo ${D_author_number}+2 | bc -l`
-                D_author_end=`echo ${D_ref_number}-2 | bc -l`
-                author=`cut ${i}.txt | awk 'NR=="'"${D_scbase_line}"'"' | \
-                    cut -b ${D_author_begin}-${D_author_end}`
+                D_author_end=`echo ${D_ref_number}-1 | bc -l`
+                author=`cat ${i}.txt | awk 'NR=="'"${D_scbase_line}"'"' | cut -b ${D_author_number}-${D_author_end} | sed -e 's/  //g'`
                 ###### 4. Get the reference
                 D_date_number=`cat ${i}.txt | grep Family | awk -F'Date' '{print $1}' | wc -c`
-                D_ref_begin=`echo ${D_ref_number}+2 | bc -l`
-                D_ref_end=`echo ${D_date_number}-2 | bc -l`
-                publish_raw==`cut ${i}.txt | awk 'NR=="'"${D_scbase_line}"'"' | \
-                    cut -b ${D_ref_begin}-${D_ref_end}`
+                D_ref_end=`echo ${D_date_number}-1 | bc -l`
+                publish_raw=`cat ${i}.txt | awk 'NR=="'"${D_scbase_line}"'"' | cut -b ${D_ref_number}-${D_ref_end} | sed -e 's/  //g'`
                 ###### 5. Get the date
+                D_date_begin=`echo ${D_date_number} | bc -l`
                 D_date_end=`echo ${D_date_number}+3 | bc -l`
-                year=`cut -b ${D_date_number}-${D_date_end}`
+                year=`cat ${i}.txt | awk 'NR=="'"${D_scbase_line}"'"' | cut -b ${D_date_begin}-${D_date_end}`
 
                 echo ${tropicos_fam}, ${tropicos},${author},${publish_raw},${year}
 
@@ -66,37 +95,38 @@ for s in `cat ${namelist} | awk -F',' '{ print $3}'`
                 #publish_raw=`echo ${tropicos_raw} | awk '{ for (i=5;i<"'"${tr_num}"'";i++ ) { print $i }}' | sed -e :x -e '$!N;s/\n/ / ;tx'`
                 #year=`echo ${tropicos_raw} | awk '{ print $"'"${str_leng}"'" }'`
         else
-            # check var and subsp
-            if [ `echo ${s} | awk -F',' '{print $3}' | grep "+var." | wc -l` -eq 1 ] && [ `echo ${s} | awk -F',' '{print $3}' | grep "+subsp." | wc -l` != 1] ; then
-                echo "Condition 2.2"
-                tropicos_raw=`cat ${i}.txt | grep ${family} | awk 'NR == 1'`
-                tropicos=`echo ${tropicos_raw} | awk '{ print $2, $3, $4, $5}'`
-                tropicos_fam=`echo ${tropicos_raw} | awk '{ print $1 }'`
-                str_leng=`echo "${tropicos_raw}" | wc -w`
-                tr_num=`echo ${str_leng}-1 | bc -l`
-                publish_raw=`echo ${tropicos_raw} | awk '{ for (i=6;i<"'"${tr_num}"'";i++ ) { print $i }}' | sed -e :x -e '$!N;s/\n/ / ;tx'`
-                year=`echo ${tropicos_raw} | awk '{print $"'"${str_leng}"'" }'`
-            elif [ `echo ${s} | awk -F',' '{print $3}' | grep "+subsp." | wc -l` -eq 1 ] && [`echo ${s} | awk -F',' '{print $3}' | grep "+var." | wc -l` != 1] ; then
-                echo "Condition 2.3"
-                tropicos_raw=`cat ${i}.txt | grep ${family} | awk 'NR == 1'`
-                tropicos=`echo ${tropicos_raw} | awk '{ print $2, $3, $4, $5}'`
-                tropicos_fam=`echo ${tropicos_raw} | awk '{ print $1 }'`
-                str_leng=`echo "${tropicos_raw}" | wc -w`
-                tr_num=`echo ${str_leng}-1 | bc -l`
-                publish_raw=`echo ${tropicos_raw} | awk '{ for (i=6;i<"'"${tr_num}"'";i++ ) { print $i }}' | sed -e :x -e '$!N;s/\n/ / ;tx'`
-                year=`echo ${tropicos_raw} | awk '{ print $"'"${str_leng}"'" }'`
-            else
-                echo "Condition 2.4"
-                tropicos_raw=`cat ${i}.txt | grep ${family} | awk 'NR == 1'`
-                tropicos=`echo ${tropicos_raw} | awk '{ print $2, $3}'`
-                tropicos_fam=`echo ${tropicos_raw} | awk '{ print $1 }'`
-                str_leng=`echo "${tropicos_raw}" | wc -w`
-                tr_num=`echo ${str_leng}-1 | bc -l`
-                publish_raw=`echo ${tropicos_raw} | awk '{ for (i=4;i<"'"${tr_num}"'";i++ ) { print $i }}' | sed -e :x -e '$!N;s/\n/ / ;tx'`
-                year=`echo ${tropicos_raw} | awk '{ print $"'"${str_leng}"'" }'`
-            fi
-            #tropicos_fam=`echo ${tropicos_raw} | awk '{ print $1 }'`
-            #tropicos=`echo ${tropicos_raw} | awk '{ print $2, $3}'`
+#             # check var and subsp
+#             if [ `echo ${s} | awk -F',' '{print $3}' | grep "+var." | wc -l` -eq 1 ] && [ `echo ${s} | awk -F',' '{print $3}' | grep "+subsp." | wc -l` != 1] ; then
+#                 # echo "Condition 2.2"
+#                 # tropicos_raw=`cat ${i}.txt | grep ${family} | awk 'NR == 1'`
+#                 # tropicos=`echo ${tropicos_raw} | awk '{ print $2, $3, $4, $5}'`
+#                 # tropicos_fam=`echo ${tropicos_raw} | awk '{ print $1 }'`
+#                 # str_leng=`echo "${tropicos_raw}" | wc -w`
+#                 # tr_num=`echo ${str_leng}-1 | bc -l`
+#                 # publish_raw=`echo ${tropicos_raw} | awk '{ for (i=6;i<"'"${tr_num}"'";i++ ) { print $i }}' | sed -e :x -e '$!N;s/\n/ / ;tx'`
+#                 # year=`echo ${tropicos_raw} | awk '{print $"'"${str_leng}"'" }'`
+#             elif [ `echo ${s} | awk -F',' '{print $3}' | grep "+subsp." | wc -l` -eq 1 ] && [`echo ${s} | awk -F',' '{print $3}' | grep "+var." | wc -l` != 1] ; then
+#                 echo "Condition 2.3"
+#                 tropicos_raw=`cat ${i}.txt | grep ${family} | awk 'NR == 1'`
+#                 tropicos=`echo ${tropicos_raw} | awk '{ print $2, $3, $4, $5}'`
+#                 tropicos_fam=`echo ${tropicos_raw} | awk '{ print $1 }'`
+#                 str_leng=`echo "${tropicos_raw}" | wc -w`
+#                 tr_num=`echo ${str_leng}-1 | bc -l`
+#                 publish_raw=`echo ${tropicos_raw} | awk '{ for (i=6;i<"'"${tr_num}"'";i++ ) { print $i }}' | sed -e :x -e '$!N;s/\n/ / ;tx'`
+#                 year=`echo ${tropicos_raw} | awk '{ print $"'"${str_leng}"'" }'`
+#             else
+#                 echo "Condition 2.4"
+#                 tropicos_raw=`cat ${i}.txt | grep ${family} | awk 'NR == 1'`
+#                 tropicos=`echo ${tropicos_raw} | awk '{ print $2, $3}'`
+#                 tropicos_fam=`echo ${tropicos_raw} | awk '{ print $1 }'`
+#                 str_leng=`echo "${tropicos_raw}" | wc -w`
+#                 tr_num=`echo ${str_leng}-1 | bc -l`
+#                 publish_raw=`echo ${tropicos_raw} | awk '{ for (i=4;i<"'"${tr_num}"'";i++ ) { print $i }}' | sed -e :x -e '$!N;s/\n/ / ;tx'`
+#                 year=`echo ${tropicos_raw} | awk '{ print $"'"${str_leng}"'" }'`
+#             fi
+#             #tropicos_fam=`echo ${tropicos_raw} | awk '{ print $1 }'`
+#             #tropicos=`echo ${tropicos_raw} | awk '{ print $2, $3}'`
+              find_multiple_records
         fi
     ###### Match our scientific name #####
     elif [ `grep "Records" ${i}.txt | wc -l` -eq 0 ]; then
