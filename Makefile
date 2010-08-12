@@ -12,6 +12,10 @@ DICT_NAME		=	"Flora of Taiwan 2"
 DICT_SRC_PATH		=	FloraTaiwan2.xml
 CSS_PATH		=	FloraTaiwan2.css
 PLIST_PATH		=	MyInfo.plist
+FAMILY_ENTRY	=   dict_fam_entry
+GENUS_ENTRY		= 	dict_gen_entry
+FB_MATTER		=	fb_matter
+DICT_ENTRY		=	dict_entry
 
 DICT_BUILD_OPTS		=
 # Suppress adding supplementary key.
@@ -36,6 +40,7 @@ RM			=	/bin/rm
 ###########################
 
 all:
+	cat $(DICT_ENTRY) $(FAMILY_ENTRY) $(GENUS_ENTRY) $(FB_MATTER) > $(DICT_SRC_PATH)
 	"$(DICT_BUILD_TOOL_BIN)/build_dict.sh" $(DICT_BUILD_OPTS) $(DICT_NAME) $(DICT_SRC_PATH) $(CSS_PATH) $(PLIST_PATH)
 	echo "Done."
 

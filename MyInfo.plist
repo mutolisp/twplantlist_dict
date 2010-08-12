@@ -19,7 +19,7 @@
 	<key>DCSDictionaryPrefsHTML</key>
 	<string>MyDictionary_prefs.html</string>
 	<key>DCSDictionaryXSL</key>
-	<string>MyDictionary.xsl</string>
+	<string>FloraTaiwan2.xsl</string>
 	<key>DCSDictionaryDefaultPrefs</key>
 	<dict>
 		<key>pronunciation</key>
