@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #
 # Makefile
 #
@@ -50,3 +51,12 @@ install:
 
 clean:
 	$(RM) -rf $(DICT_DEV_KIT_OBJ_DIR)
+=======
+DICT=src/flora_taiwan.dict  src/flora_taiwan.idx  src/flora_taiwan.ifo 
+
+all: dict
+
+dict:
+		cp $(DICT) Flora_Taiwan ; tar -jcvf Flora_Taiwan.tar.bz2 Flora_Taiwan; \
+		./sdconv/convert Flora_Taiwan.tar.bz2 ; mv Flora_Taiwan.tar.bz2 bin
+>>>>>>> 9924dd33cf17d786f689794cc9758cb3aa40fe66
