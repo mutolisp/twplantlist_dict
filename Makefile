@@ -8,14 +8,10 @@
 
 # You need to edit these values.
 
-DICT_NAME		=	"Flora of Taiwan 2"
-DICT_SRC_PATH		=	FloraTaiwan2.xml
-CSS_PATH		=	FloraTaiwan2.css
+DICT_NAME		=	"Plant List of Taiwan"
+DICT_SRC_PATH		=	twplantlist.xml
+CSS_PATH		=	twplantlist.css
 PLIST_PATH		=	MyInfo.plist
-FAMILY_ENTRY	=   dict_fam_entry
-GENUS_ENTRY		= 	dict_gen_entry
-FB_MATTER		=	fb_matter
-DICT_ENTRY		=	dict_entry
 
 DICT_BUILD_OPTS		=
 # Suppress adding supplementary key.
@@ -26,7 +22,7 @@ DICT_BUILD_OPTS		=
 # The DICT_BUILD_TOOL_DIR value is used also in "build_dict.sh" script.
 # You need to set it when you invoke the script directly.
 
-DICT_BUILD_TOOL_DIR	=	"/Developer/Extras/Dictionary Development Kit"
+DICT_BUILD_TOOL_DIR	=	"./Dictionary Development Kit"
 DICT_BUILD_TOOL_BIN	=	"$(DICT_BUILD_TOOL_DIR)/bin"
 
 ###########################
@@ -40,7 +36,6 @@ RM			=	/bin/rm
 ###########################
 
 all:
-	cat $(DICT_ENTRY) $(FAMILY_ENTRY) $(GENUS_ENTRY) $(FB_MATTER) > $(DICT_SRC_PATH)
 	"$(DICT_BUILD_TOOL_BIN)/build_dict.sh" $(DICT_BUILD_OPTS) $(DICT_NAME) $(DICT_SRC_PATH) $(CSS_PATH) $(PLIST_PATH)
 	echo "Done."
 
