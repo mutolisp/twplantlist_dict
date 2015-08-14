@@ -1024,6 +1024,10 @@
   <li><i>Gomphrena celosioides</i>  假千日紅</li>
   <li><i>Gomphrena serrata</i>  短穗假千日紅</li>
 </ol>
+<i>Iresine</i> 洋莧屬
+<ol>
+  <li><i>Iresine herbstii</i>  洋莧</li>
+</ol>
 <i>Philoxerus</i> 安旱莧屬
 <ol>
   <li><i>Philoxerus wrightii</i>  安旱草</li>
@@ -1289,6 +1293,15 @@
         科名：莧科 Amaranthaceae<br/>
         中名：短穗假千日紅<br/>
     </d:entry>
+<d:entry id="Iresine_herbstii" d:title="Iresine herbstii">
+        <d:index d:value="Iresine herbstii"/>
+        <d:index d:value="洋莧"/>
+    <d:index d:value="酒丹參"/>
+    <d:index d:value="血莧"/>
+        <h2><i>Iresine herbstii</i> Hook.</h2>
+        科名：莧科 Amaranthaceae<br/>
+        中名：洋莧 酒丹參 血莧<br/>
+    </d:entry>
 <d:entry id="Philoxerus_wrightii" d:title="Philoxerus wrightii">
         <d:index d:value="Philoxerus wrightii"/>
             <d:index d:value="安旱草"/>
@@ -1335,6 +1348,7 @@
 <i>Zephyranthes</i> 蔥蓮屬
 <ol>
   <li><i>Zephyranthes candida</i>  蔥蘭</li>
+  <li><i>Zephyranthes carinata</i>  韭蘭</li>
 </ol>
 </d:entry>
 <d:entry id="Allium_bakeri_var._morrisonense" d:title="Allium bakeri var. morrisonense">
@@ -1408,6 +1422,13 @@
         <h2><i>Zephyranthes candida</i> (Lindl.) Herb.</h2>
         科名：石蒜科 Amaryllidaceae<br/>
         中名：蔥蘭<br/>
+    </d:entry>
+<d:entry id="Zephyranthes_carinata" d:title="Zephyranthes carinata">
+        <d:index d:value="Zephyranthes carinata"/>
+            <d:index d:value="韭蘭"/>
+        <h2><i>Zephyranthes carinata</i> Herb.</h2>
+        科名：石蒜科 Amaryllidaceae<br/>
+        中名：韭蘭<br/>
     </d:entry>
 <d:entry id="Anacardiaceae" d:title="Anacardiaceae">
         <d:index d:value="Anacardiaceae"/>
@@ -1955,6 +1976,10 @@
 <ol>
   <li><i>Adenium obesum</i>  沙漠玫瑰</li>
 </ol>
+<i>Allamanda</i> 黃蟬屬
+<ol>
+  <li><i>Allamanda cathartica</i>  軟枝黃蟬</li>
+</ol>
 <i>Alstonia</i> 雞骨常山屬
 <ol>
   <li><i>Alstonia scholaris</i>  黑板樹</li>
@@ -2092,6 +2117,13 @@
         <h2><i>Adenium obesum</i> (Forssk.) Roem. &amp; Schult.</h2>
         科名：夾竹桃科 Apocynaceae<br/>
         中名：沙漠玫瑰<br/>
+    </d:entry>
+<d:entry id="Allamanda_cathartica" d:title="Allamanda cathartica">
+        <d:index d:value="Allamanda cathartica"/>
+            <d:index d:value="軟枝黃蟬"/>
+        <h2><i>Allamanda cathartica</i> L.</h2>
+        科名：夾竹桃科 Apocynaceae<br/>
+        中名：軟枝黃蟬<br/>
     </d:entry>
 <d:entry id="Alstonia_scholaris" d:title="Alstonia scholaris">
         <d:index d:value="Alstonia scholaris"/>
@@ -16851,6 +16883,10 @@
 <ol>
   <li><i>Claoxylon brachyandrum</i>  假鐵莧</li>
 </ol>
+<i>Codiaeum</i> 變葉木屬
+<ol>
+  <li><i>Codiaeum variegatum</i>  變葉木</li>
+</ol>
 <i>Croton</i> 巴豆屬
 <ol>
   <li><i>Croton bonplandianus</i>  波氏巴豆</li>
@@ -17187,6 +17223,13 @@
         <h2><i>Claoxylon brachyandrum</i> Pax &amp; Hoffm.</h2>
         科名：大戟科 Euphorbiaceae<br/>
         中名：假鐵莧<br/>
+    </d:entry>
+<d:entry id="Codiaeum_variegatum" d:title="Codiaeum variegatum">
+        <d:index d:value="Codiaeum variegatum"/>
+            <d:index d:value="變葉木"/>
+        <h2><i>Codiaeum variegatum</i> (L.) Rumph. <i>ex</i> A. Juss.</h2>
+        科名：大戟科 Euphorbiaceae<br/>
+        中名：變葉木<br/>
     </d:entry>
 <d:entry id="Croton_bonplandianus" d:title="Croton bonplandianus">
         <d:index d:value="Croton bonplandianus"/>
@@ -22861,6 +22904,10 @@
   <li><i>Prunella vulgaris</i> var. <i>nanhutashanensis</i>  高山夏枯草</li>
   <li><i>Prunella vulgaris</i> var. <i>nanhutashanense</i>  南湖大山夏枯草</li>
 </ol>
+<i>Rosmarinus</i> 迷迭香屬
+<ol>
+  <li><i>Rosmarinus officinalis</i>  迷迭香</li>
+</ol>
 <i>Rubiteucris</i> 野藿香屬
 <ol>
   <li><i>Rubiteucris palmata</i>  掌狀野藿香</li>
@@ -23615,6 +23662,13 @@
         <h2><i>Prunella vulgaris</i> var. <i>nanhutashanense</i> S. S. Ying</h2>
         科名：唇形科 Lamiaceae<br/>
         中名：南湖大山夏枯草<br/>
+    </d:entry>
+<d:entry id="Rosmarinus_officinalis" d:title="Rosmarinus officinalis">
+        <d:index d:value="Rosmarinus officinalis"/>
+            <d:index d:value="迷迭香"/>
+        <h2><i>Rosmarinus officinalis</i> L.</h2>
+        科名：唇形科 Lamiaceae<br/>
+        中名：迷迭香<br/>
     </d:entry>
 <d:entry id="Rubiteucris_palmata" d:title="Rubiteucris palmata">
         <d:index d:value="Rubiteucris palmata"/>
@@ -25982,6 +26036,10 @@
   <li><i>Abutilon striatum</i>  風鈴花</li>
   <li><i>Abutilon theophrasti</i>  莔麻</li>
 </ol>
+<i>Alcea</i> 蜀葵屬
+<ol>
+  <li><i>Alcea rosea</i>  蜀葵</li>
+</ol>
 <i>Anoda</i> 蔓錦葵屬
 <ol>
   <li><i>Anoda cristata</i>  冠萼蔓錦葵</li>
@@ -26028,6 +26086,7 @@
   <li><i>Hibiscus makinoi</i>  牧野氏山芙蓉</li>
   <li><i>Hibiscus mutabilis</i>  木芙蓉</li>
   <li><i>Hibiscus rosa-sinensis</i>  朱槿</li>
+  <li><i>Hibiscus rosa-sinensis</i> var. <i>rubro-plenus</i>  重瓣朱槿</li>
   <li><i>Hibiscus schizopetalus</i>  裂瓣朱槿</li>
   <li><i>Hibiscus surattensis</i>  刺芙蓉</li>
   <li><i>Hibiscus syriacus</i>  木槿</li>
@@ -26197,6 +26256,13 @@
         科名：錦葵科 Malvaceae<br/>
         中名：莔麻<br/>
     </d:entry>
+<d:entry id="Alcea_rosea" d:title="Alcea rosea">
+        <d:index d:value="Alcea rosea"/>
+            <d:index d:value="蜀葵"/>
+        <h2><i>Alcea rosea</i> L.</h2>
+        科名：錦葵科 Malvaceae<br/>
+        中名：蜀葵<br/>
+    </d:entry>
 <d:entry id="Anoda_cristata" d:title="Anoda cristata">
         <d:index d:value="Anoda cristata"/>
             <d:index d:value="冠萼蔓錦葵"/>
@@ -26337,6 +26403,13 @@
         <h2><i>Hibiscus rosa-sinensis</i> L.</h2>
         科名：錦葵科 Malvaceae<br/>
         中名：朱槿<br/>
+    </d:entry>
+<d:entry id="Hibiscus_rosa-sinensis_var._rubro-plenus" d:title="Hibiscus rosa-sinensis var. rubro-plenus">
+        <d:index d:value="Hibiscus rosa-sinensis var. rubro-plenus"/>
+            <d:index d:value="重瓣朱槿"/>
+        <h2><i>Hibiscus rosa-sinensis</i> var. <i>rubro-plenus</i> Sweet</h2>
+        科名：錦葵科 Malvaceae<br/>
+        中名：重瓣朱槿<br/>
     </d:entry>
 <d:entry id="Hibiscus_schizopetalus" d:title="Hibiscus schizopetalus">
         <d:index d:value="Hibiscus schizopetalus"/>
@@ -41367,6 +41440,10 @@
         <d:index d:value="Proteaceae"/>
         <d:index d:value="山龍眼科"/>
         <h2>Proteaceae(山龍眼科)</h2>
+<i>Grevillea</i> 銀樺屬
+<ol>
+  <li><i>Grevillea robusta</i>  銀樺</li>
+</ol>
 <i>Helicia</i> 山龍眼屬
 <ol>
   <li><i>Helicia cochinchinensis</i>  紅葉樹</li>
@@ -41374,6 +41451,13 @@
   <li><i>Helicia rengetiensis</i>  蓮花池山龍眼</li>
 </ol>
 </d:entry>
+<d:entry id="Grevillea_robusta" d:title="Grevillea robusta">
+        <d:index d:value="Grevillea robusta"/>
+            <d:index d:value="銀樺"/>
+        <h2><i>Grevillea robusta</i> A. Cunn. <i>ex</i> R. Br.</h2>
+        科名：山龍眼科 Proteaceae<br/>
+        中名：銀樺<br/>
+    </d:entry>
 <d:entry id="Helicia_cochinchinensis" d:title="Helicia cochinchinensis">
         <d:index d:value="Helicia cochinchinensis"/>
             <d:index d:value="紅葉樹"/>
