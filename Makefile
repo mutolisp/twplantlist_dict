@@ -36,10 +36,11 @@ RM			=	/bin/rm
 ###########################
 
 all:
-	$(PYTHON) src/dict_generator.py
 	"$(DICT_BUILD_TOOL_BIN)/build_dict.sh" $(DICT_BUILD_OPTS) $(DICT_NAME) $(DICT_SRC_PATH) $(CSS_PATH) $(PLIST_PATH)
 	echo "Done."
 
+xml:
+	$(PYTHON) src/dict_generator.py
 
 install:
 	echo "Installing into $(DESTINATION_FOLDER)".

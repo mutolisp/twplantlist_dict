@@ -146,6 +146,7 @@ def main():
             SP_FAM = fam_list[f][1] + ' ' + fam_list[f][0]
             # format names
             SPNAME_W_AUTHOR = fmtname(sp_list_all[s][1])
+            SPNAME_W_AUTHOR = re.sub('&', '&amp;', SPNAME_W_AUTHOR)
             SP_ENTRY = '''<d:entry id="%s" d:title="%s">
         <d:index d:value="%s"/>
         %s
