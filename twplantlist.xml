@@ -1548,6 +1548,10 @@
   <li><i>Annona montana</i>  巴西番荔枝</li>
   <li><i>Annona squamosa</i>  番荔枝</li>
 </ol>
+<i>Artabotrys</i> 鷹爪花屬
+<ol>
+  <li><i>Artabotrys hexapetalus</i>  鷹爪花</li>
+</ol>
 <i>Fissistigma</i> 瓜馥木屬
 <ol>
   <li><i>Fissistigma glaucescens</i>  裏白瓜馥木</li>
@@ -1575,6 +1579,13 @@
         <h2><i>Annona squamosa</i> L.</h2>
         科名：番荔枝科 Annonaceae<br/>
         中名：番荔枝<br/>
+    </d:entry>
+<d:entry id="Artabotrys_hexapetalus" d:title="Artabotrys hexapetalus">
+        <d:index d:value="Artabotrys hexapetalus"/>
+            <d:index d:value="鷹爪花"/>
+        <h2><i>Artabotrys hexapetalus</i> (L. f.) Bhandari</h2>
+        科名：番荔枝科 Annonaceae<br/>
+        中名：鷹爪花<br/>
     </d:entry>
 <d:entry id="Fissistigma_glaucescens" d:title="Fissistigma glaucescens">
         <d:index d:value="Fissistigma glaucescens"/>
@@ -1940,6 +1951,10 @@
         <d:index d:value="Apocynaceae"/>
         <d:index d:value="夾竹桃科"/>
         <h2>Apocynaceae(夾竹桃科)</h2>
+<i>Adenium</i> 沙漠玫瑰屬
+<ol>
+  <li><i>Adenium obesum</i>  沙漠玫瑰</li>
+</ol>
 <i>Alstonia</i> 雞骨常山屬
 <ol>
   <li><i>Alstonia scholaris</i>  黑板樹</li>
@@ -2031,6 +2046,10 @@
 <ol>
   <li><i>Parsonsia laevigata</i>  爬森藤</li>
 </ol>
+<i>Plumeria</i> 緬梔屬
+<ol>
+  <li><i>Plumeria rubra</i>  雞蛋花</li>
+</ol>
 <i>Rauvolfia</i> 蘿芙木屬
 <ol>
   <li><i>Rauvolfia taiwanensis</i>  臺灣蘿芙木</li>
@@ -2067,6 +2086,13 @@
   <li><i>Tylophora taiwanensis</i>  臺灣鷗蔓</li>
 </ol>
 </d:entry>
+<d:entry id="Adenium_obesum" d:title="Adenium obesum">
+        <d:index d:value="Adenium obesum"/>
+            <d:index d:value="沙漠玫瑰"/>
+        <h2><i>Adenium obesum</i> (Forssk.) Roem. &amp; Schult.</h2>
+        科名：夾竹桃科 Apocynaceae<br/>
+        中名：沙漠玫瑰<br/>
+    </d:entry>
 <d:entry id="Alstonia_scholaris" d:title="Alstonia scholaris">
         <d:index d:value="Alstonia scholaris"/>
             <d:index d:value="黑板樹"/>
@@ -2289,6 +2315,14 @@
         <h2><i>Parsonsia laevigata</i> (Moon) Alston</h2>
         科名：夾竹桃科 Apocynaceae<br/>
         中名：爬森藤<br/>
+    </d:entry>
+<d:entry id="Plumeria_rubra" d:title="Plumeria rubra">
+        <d:index d:value="Plumeria rubra"/>
+        <d:index d:value="雞蛋花"/>
+    <d:index d:value="緬梔"/>
+        <h2><i>Plumeria rubra</i> L.</h2>
+        科名：夾竹桃科 Apocynaceae<br/>
+        中名：雞蛋花 緬梔<br/>
     </d:entry>
 <d:entry id="Rauvolfia_taiwanensis" d:title="Rauvolfia taiwanensis">
         <d:index d:value="Rauvolfia taiwanensis"/>
@@ -2689,6 +2723,10 @@
   <li><i>Arisaema thunbergii</i> subsp. <i>autumnale</i>  東台天南星</li>
   <li><i>Arisaema thunbergii</i> subsp. <i>urashima</i>  浦島天南星</li>
 </ol>
+<i>Caladium</i> 花葉芋屬
+<ol>
+  <li><i>Caladium × hortulanum</i>  彩葉芋</li>
+</ol>
 <i>Colocasia</i> 芋屬
 <ol>
   <li><i>Colocasia esculenta</i>  芋</li>
@@ -2928,6 +2966,13 @@
         <h2><i>Arisaema thunbergii</i> subsp. <i>urashima</i> (Hara) Ohashi &amp; J. Murata</h2>
         科名：天南星科 Araceae<br/>
         中名：浦島天南星<br/>
+    </d:entry>
+<d:entry id="Caladium_×_hortulanum" d:title="Caladium × hortulanum">
+        <d:index d:value="Caladium × hortulanum"/>
+            <d:index d:value="彩葉芋"/>
+        <h2><i>Caladium × hortulanum</i> Birdsey</h2>
+        科名：天南星科 Araceae<br/>
+        中名：彩葉芋<br/>
     </d:entry>
 <d:entry id="Colocasia_esculenta" d:title="Colocasia esculenta">
         <d:index d:value="Colocasia esculenta"/>
@@ -4655,7 +4700,7 @@
 </ol>
 <i>Chrysanthemum</i> 筒蒿屬
 <ol>
-  <li><i>Chrysanthemum frutescens</i>  蓬盪菊</li>
+  <li><i>Chrysanthemum frutescens</i>  瑪格麗特</li>
   <li><i>Chrysanthemum pacificum</i>  太平洋菊</li>
 </ol>
 <i>Cichorium</i> 菊苣屬
@@ -5767,10 +5812,11 @@
     </d:entry>
 <d:entry id="Chrysanthemum_frutescens" d:title="Chrysanthemum frutescens">
         <d:index d:value="Chrysanthemum frutescens"/>
-            <d:index d:value="蓬盪菊"/>
+        <d:index d:value="瑪格麗特"/>
+    <d:index d:value="蓬盪菊"/>
         <h2><i>Chrysanthemum frutescens</i> L. </h2>
         科名：菊科 Asteraceae<br/>
-        中名：蓬盪菊<br/>
+        中名：瑪格麗特 蓬盪菊<br/>
     </d:entry>
 <d:entry id="Chrysanthemum_pacificum" d:title="Chrysanthemum pacificum">
         <d:index d:value="Chrysanthemum pacificum"/>
@@ -10201,6 +10247,7 @@
 <i>Casuarina</i> 木麻黃屬
 <ol>
   <li><i>Casuarina equisetifolia</i>  木麻黃</li>
+  <li><i>Casuarina nana</i>  千頭木麻黃</li>
 </ol>
 </d:entry>
 <d:entry id="Casuarina_equisetifolia" d:title="Casuarina equisetifolia">
@@ -10209,6 +10256,13 @@
         <h2><i>Casuarina equisetifolia</i> L.</h2>
         科名：木麻黃科 Casuarinaceae<br/>
         中名：木麻黃<br/>
+    </d:entry>
+<d:entry id="Casuarina_nana" d:title="Casuarina nana">
+        <d:index d:value="Casuarina nana"/>
+            <d:index d:value="千頭木麻黃"/>
+        <h2><i>Casuarina nana</i> Sieber <i>ex</i> Spreng.</h2>
+        科名：木麻黃科 Casuarinaceae<br/>
+        中名：千頭木麻黃<br/>
     </d:entry>
 <d:entry id="Celastraceae" d:title="Celastraceae">
         <d:index d:value="Celastraceae"/>
@@ -16763,6 +16817,7 @@
   <li><i>Acalypha reptans</i>  紅尾鐵莧</li>
   <li><i>Acalypha siamensis</i>  菱葉鐵莧</li>
   <li><i>Acalypha suirenbiensis</i>  花蓮鐵莧</li>
+  <li><i>Acalypha wilkesiana</i>  威氏鐵莧</li>
 </ol>
 <i>Alchornea</i> 山麻桿屬
 <ol>
@@ -16804,6 +16859,7 @@
 </ol>
 <i>Euphorbia</i> 大戟屬
 <ol>
+  <li><i>Euphorbia cotinifolia</i>  紫錦木</li>
   <li><i>Euphorbia cyathophora</i>  猩猩草</li>
   <li><i>Euphorbia formosana</i>  臺灣大戟</li>
   <li><i>Euphorbia graminea</i>  禾葉大戟</li>
@@ -16983,6 +17039,13 @@
         科名：大戟科 Euphorbiaceae<br/>
         中名：花蓮鐵莧<br/>
     </d:entry>
+<d:entry id="Acalypha_wilkesiana" d:title="Acalypha wilkesiana">
+        <d:index d:value="Acalypha wilkesiana"/>
+            <d:index d:value="威氏鐵莧"/>
+        <h2><i>Acalypha wilkesiana</i> Müll. Arg.</h2>
+        科名：大戟科 Euphorbiaceae<br/>
+        中名：威氏鐵莧<br/>
+    </d:entry>
 <d:entry id="Alchornea_trewioides_var._formosae" d:title="Alchornea trewioides var. formosae">
         <d:index d:value="Alchornea trewioides var. formosae"/>
             <d:index d:value="臺灣山麻桿"/>
@@ -17145,6 +17208,14 @@
         <h2><i>Croton tiglium</i> L.</h2>
         科名：大戟科 Euphorbiaceae<br/>
         中名：巴豆<br/>
+    </d:entry>
+<d:entry id="Euphorbia_cotinifolia" d:title="Euphorbia cotinifolia">
+        <d:index d:value="Euphorbia cotinifolia"/>
+        <d:index d:value="紫錦木"/>
+    <d:index d:value="非洲紅"/>
+        <h2><i>Euphorbia cotinifolia</i> L.</h2>
+        科名：大戟科 Euphorbiaceae<br/>
+        中名：紫錦木 非洲紅<br/>
     </d:entry>
 <d:entry id="Euphorbia_cyathophora" d:title="Euphorbia cyathophora">
         <d:index d:value="Euphorbia cyathophora"/>
@@ -17459,6 +17530,10 @@
 <ol>
   <li><i>Callerya nitida</i>  光葉魚藤</li>
   <li><i>Callerya reticulata</i>  老荊藤</li>
+</ol>
+<i>Calliandra</i> 朱纓花屬
+<ol>
+  <li><i>Calliandra haematocephala</i>  美洲合歡</li>
 </ol>
 <i>Calopogonium</i> 擬大豆屬
 <ol>
@@ -18197,6 +18272,13 @@
         <h2><i>Callerya reticulata</i> (Benth.) Schot</h2>
         科名：豆科 Fabaceae<br/>
         中名：老荊藤<br/>
+    </d:entry>
+<d:entry id="Calliandra_haematocephala" d:title="Calliandra haematocephala">
+        <d:index d:value="Calliandra haematocephala"/>
+            <d:index d:value="美洲合歡"/>
+        <h2><i>Calliandra haematocephala</i> Hassk.</h2>
+        科名：豆科 Fabaceae<br/>
+        中名：美洲合歡<br/>
     </d:entry>
 <d:entry id="Calopogonium_mucunoides" d:title="Calopogonium mucunoides">
         <d:index d:value="Calopogonium mucunoides"/>
@@ -22303,6 +22385,7 @@
 <ol>
   <li><i>Iris formosana</i>  臺灣鳶尾</li>
   <li><i>Iris nantouensis</i>  南投鳶尾</li>
+  <li><i>Iris tectorum</i>  鳶尾</li>
 </ol>
 <i>Sisyrinchium</i> 庭菖蒲屬
 <ol>
@@ -22352,6 +22435,13 @@
         <h2><i>Iris nantouensis</i> S. S. Ying</h2>
         科名：鳶尾科 Iridaceae<br/>
         中名：南投鳶尾<br/>
+    </d:entry>
+<d:entry id="Iris_tectorum" d:title="Iris tectorum">
+        <d:index d:value="Iris tectorum"/>
+            <d:index d:value="鳶尾"/>
+        <h2><i>Iris tectorum</i> Maxim.</h2>
+        科名：鳶尾科 Iridaceae<br/>
+        中名：鳶尾<br/>
     </d:entry>
 <d:entry id="Sisyrinchium_atlanticum" d:title="Sisyrinchium atlanticum">
         <d:index d:value="Sisyrinchium atlanticum"/>
@@ -22828,6 +22918,7 @@
 <i>Vitex</i> 牡荊屬
 <ol>
   <li><i>Vitex negundo</i>  黃荊</li>
+  <li><i>Vitex negundo</i> var. <i>cannabifolia</i>  牡荊</li>
   <li><i>Vitex quinata</i>  山埔姜</li>
   <li><i>Vitex rotundifolia</i>  海埔姜</li>
   <li><i>Vitex trifolia</i>  三葉蔓荊</li>
@@ -23758,6 +23849,13 @@
         科名：唇形科 Lamiaceae<br/>
         中名：黃荊 埔姜仔 埔荊茶<br/>
     </d:entry>
+<d:entry id="Vitex_negundo_var._cannabifolia" d:title="Vitex negundo var. cannabifolia">
+        <d:index d:value="Vitex negundo var. cannabifolia"/>
+            <d:index d:value="牡荊"/>
+        <h2><i>Vitex negundo</i> var. <i>cannabifolia</i> (Siebold &amp; Zucc.) Hand.-Mazz.</h2>
+        科名：唇形科 Lamiaceae<br/>
+        中名：牡荊<br/>
+    </d:entry>
 <d:entry id="Vitex_quinata" d:title="Vitex quinata">
         <d:index d:value="Vitex quinata"/>
         <d:index d:value="山埔姜"/>
@@ -23932,7 +24030,7 @@
   <li><i>Machilus obovatifolia</i>  恆春楨楠</li>
   <li><i>Machilus obovatifolia</i> var. <i>taiwuensis</i>  大武楨楠</li>
   <li><i>Machilus philippinensis</i>  菲律賓楠</li>
-  <li><i>Machilus thunbergii</i>  豬腳楠</li>
+  <li><i>Machilus thunbergii</i>  紅楠</li>
   <li><i>Machilus zuihoensis</i>  香楠</li>
   <li><i>Machilus zuihoensis</i> var. <i>mushaensis</i>  青葉楠</li>
 </ol>
@@ -23950,6 +24048,10 @@
   <li><i>Neolitsea sericea</i>  白新木薑子</li>
   <li><i>Neolitsea sericea</i> var. <i>aurata</i>  金新木薑子</li>
   <li><i>Neolitsea villosa</i>  蘭嶼新木薑子</li>
+</ol>
+<i>Persea</i> 鱷梨屬
+<ol>
+  <li><i>Persea americana</i>  酪梨</li>
 </ol>
 <i>Phoebe</i> 雅楠屬
 <ol>
@@ -24346,11 +24448,11 @@
     </d:entry>
 <d:entry id="Machilus_thunbergii" d:title="Machilus thunbergii">
         <d:index d:value="Machilus thunbergii"/>
-        <d:index d:value="豬腳楠"/>
-    <d:index d:value="紅楠"/>
+        <d:index d:value="紅楠"/>
+    <d:index d:value="豬腳楠"/>
         <h2><i>Machilus thunbergii</i> Sieb. &amp; Zucc.</h2>
         科名：樟科 Lauraceae<br/>
-        中名：豬腳楠 紅楠<br/>
+        中名：紅楠 豬腳楠<br/>
     </d:entry>
 <d:entry id="Machilus_zuihoensis" d:title="Machilus zuihoensis">
         <d:index d:value="Machilus zuihoensis"/>
@@ -24451,6 +24553,13 @@
         科名：樟科 Lauraceae<br/>
         中名：蘭嶼新木薑子<br/>
     </d:entry>
+<d:entry id="Persea_americana" d:title="Persea americana">
+        <d:index d:value="Persea americana"/>
+            <d:index d:value="酪梨"/>
+        <h2><i>Persea americana</i> Mill.</h2>
+        科名：樟科 Lauraceae<br/>
+        中名：酪梨<br/>
+    </d:entry>
 <d:entry id="Phoebe_formosana" d:title="Phoebe formosana">
         <d:index d:value="Phoebe formosana"/>
             <d:index d:value="臺灣雅楠"/>
@@ -24471,16 +24580,17 @@
         <h2>Lecythidaceae(玉蕊科)</h2>
 <i>Barringtonia</i> 棋盤腳樹屬
 <ol>
-  <li><i>Barringtonia asiatica</i>  棋盤腳樹</li>
+  <li><i>Barringtonia asiatica</i>  棋盤腳</li>
   <li><i>Barringtonia racemosa</i>  水茄苳</li>
 </ol>
 </d:entry>
 <d:entry id="Barringtonia_asiatica" d:title="Barringtonia asiatica">
         <d:index d:value="Barringtonia asiatica"/>
-            <d:index d:value="棋盤腳樹"/>
+        <d:index d:value="棋盤腳"/>
+    <d:index d:value="棋盤腳樹"/>
         <h2><i>Barringtonia asiatica</i> (L.) Kurz</h2>
         科名：玉蕊科 Lecythidaceae<br/>
-        中名：棋盤腳樹<br/>
+        中名：棋盤腳 棋盤腳樹<br/>
     </d:entry>
 <d:entry id="Barringtonia_racemosa" d:title="Barringtonia racemosa">
         <d:index d:value="Barringtonia racemosa"/>
@@ -25641,10 +25751,11 @@
     </d:entry>
 <d:entry id="Lagerstroemia_indica" d:title="Lagerstroemia indica">
         <d:index d:value="Lagerstroemia indica"/>
-            <d:index d:value="紫薇"/>
+        <d:index d:value="紫薇"/>
+    <d:index d:value="小花紫薇"/>
         <h2><i>Lagerstroemia indica</i> Linn.</h2>
         科名：千屈菜科 Lythraceae<br/>
-        中名：紫薇<br/>
+        中名：紫薇 小花紫薇<br/>
     </d:entry>
 <d:entry id="Lagerstroemia_subcostata" d:title="Lagerstroemia subcostata">
         <d:index d:value="Lagerstroemia subcostata"/>
@@ -25766,6 +25877,7 @@
   <li><i>Michelia compressa</i>  烏心石</li>
   <li><i>Michelia compressa</i> var. <i>formosana</i>  臺灣烏心石</li>
   <li><i>Michelia compressa</i> var. <i>lanyuensis</i>  蘭嶼烏心石</li>
+  <li><i>Michelia figo</i>  含笑花</li>
 </ol>
 </d:entry>
 <d:entry id="Magnolia_kachirachirai" d:title="Magnolia kachirachirai">
@@ -25802,6 +25914,13 @@
         <h2><i>Michelia compressa</i> var. <i>lanyuensis</i> S. Y. Lu et al.</h2>
         科名：木蘭科 Magnoliaceae<br/>
         中名：蘭嶼烏心石<br/>
+    </d:entry>
+<d:entry id="Michelia_figo" d:title="Michelia figo">
+        <d:index d:value="Michelia figo"/>
+            <d:index d:value="含笑花"/>
+        <h2><i>Michelia figo</i> (Lour.) Spreng.</h2>
+        科名：木蘭科 Magnoliaceae<br/>
+        中名：含笑花<br/>
     </d:entry>
 <d:entry id="Malpighiaceae" d:title="Malpighiaceae">
         <d:index d:value="Malpighiaceae"/>
@@ -26817,6 +26936,10 @@
 <ol>
   <li><i>Sonerila tenera</i>  三蕊草</li>
 </ol>
+<i>Tibouchina</i> 巴西野牡丹屬
+<ol>
+  <li><i>Tibouchina semidecandra</i>  巴西野牡丹</li>
+</ol>
 </d:entry>
 <d:entry id="Astronia_formosana" d:title="Astronia formosana">
         <d:index d:value="Astronia formosana"/>
@@ -27010,6 +27133,13 @@
         科名：野牡丹科 Melastomataceae<br/>
         中名：三蕊草<br/>
     </d:entry>
+<d:entry id="Tibouchina_semidecandra" d:title="Tibouchina semidecandra">
+        <d:index d:value="Tibouchina semidecandra"/>
+            <d:index d:value="巴西野牡丹"/>
+        <h2><i>Tibouchina semidecandra</i> (Mart. &amp; Schrank <i>ex</i> DC.) Cogn.</h2>
+        科名：野牡丹科 Melastomataceae<br/>
+        中名：巴西野牡丹<br/>
+    </d:entry>
 <d:entry id="Meliaceae" d:title="Meliaceae">
         <d:index d:value="Meliaceae"/>
         <d:index d:value="楝科"/>
@@ -27044,6 +27174,10 @@
 <ol>
   <li><i>Swietenia macrophylla</i>  大葉桃花心木</li>
   <li><i>Swietenia mahogoni</i>  桃花心木</li>
+</ol>
+<i>Toona</i> 香椿屬
+<ol>
+  <li><i>Toona sinensis</i>  香椿</li>
 </ol>
 </d:entry>
 <d:entry id="Aglaia_chittagonga" d:title="Aglaia chittagonga">
@@ -27137,6 +27271,13 @@
         <h2><i>Swietenia mahogoni</i> Lam.</h2>
         科名：楝科 Meliaceae<br/>
         中名：桃花心木<br/>
+    </d:entry>
+<d:entry id="Toona_sinensis" d:title="Toona sinensis">
+        <d:index d:value="Toona sinensis"/>
+            <d:index d:value="香椿"/>
+        <h2><i>Toona sinensis</i> (A. Juss.) M. Roem.</h2>
+        科名：楝科 Meliaceae<br/>
+        中名：香椿<br/>
     </d:entry>
 <d:entry id="Menispermaceae" d:title="Menispermaceae">
         <d:index d:value="Menispermaceae"/>
@@ -28032,9 +28173,18 @@
   <li><i>Eucalyptus maculata</i> var. <i>citriodora</i>  檸檬桉</li>
   <li><i>Eucalyptus robusta</i>  大葉桉</li>
 </ol>
+<i>Eugenia</i> 番櫻桃屬
+<ol>
+  <li><i>Eugenia uniflora</i>  稜果蒲桃</li>
+</ol>
 <i>Melaleuca</i> 白千層屬
 <ol>
+  <li><i>Melaleuca alternifolia</i>  澳洲茶樹</li>
   <li><i>Melaleuca leucadendra</i>  白千層</li>
+</ol>
+<i>Myrciaria</i> 擬愛神木屬
+<ol>
+  <li><i>Myrciaria cauliflora</i>  嘉寶果</li>
 </ol>
 <i>Psidium</i> 番石榴屬
 <ol>
@@ -28087,12 +28237,34 @@
         科名：桃金孃科 Myrtaceae<br/>
         中名：大葉桉<br/>
     </d:entry>
+<d:entry id="Eugenia_uniflora" d:title="Eugenia uniflora">
+        <d:index d:value="Eugenia uniflora"/>
+            <d:index d:value="稜果蒲桃"/>
+        <h2><i>Eugenia uniflora</i> L.</h2>
+        科名：桃金孃科 Myrtaceae<br/>
+        中名：稜果蒲桃<br/>
+    </d:entry>
+<d:entry id="Melaleuca_alternifolia" d:title="Melaleuca alternifolia">
+        <d:index d:value="Melaleuca alternifolia"/>
+            <d:index d:value="澳洲茶樹"/>
+        <h2><i>Melaleuca alternifolia</i> Cheel</h2>
+        科名：桃金孃科 Myrtaceae<br/>
+        中名：澳洲茶樹<br/>
+    </d:entry>
 <d:entry id="Melaleuca_leucadendra" d:title="Melaleuca leucadendra">
         <d:index d:value="Melaleuca leucadendra"/>
             <d:index d:value="白千層"/>
         <h2><i>Melaleuca leucadendra</i> L.</h2>
         科名：桃金孃科 Myrtaceae<br/>
         中名：白千層<br/>
+    </d:entry>
+<d:entry id="Myrciaria_cauliflora" d:title="Myrciaria cauliflora">
+        <d:index d:value="Myrciaria cauliflora"/>
+        <d:index d:value="嘉寶果"/>
+    <d:index d:value="樹葡萄"/>
+        <h2><i>Myrciaria cauliflora</i> (Mart.) O. Berg</h2>
+        科名：桃金孃科 Myrtaceae<br/>
+        中名：嘉寶果 樹葡萄<br/>
     </d:entry>
 <d:entry id="Psidium_guajava" d:title="Psidium guajava">
         <d:index d:value="Psidium guajava"/>
@@ -28475,7 +28647,7 @@
 <i>Osmanthus</i> 木犀屬
 <ol>
   <li><i>Osmanthus enervius</i>  無脈木犀</li>
-  <li><i>Osmanthus fragrans</i>  木犀</li>
+  <li><i>Osmanthus fragrans</i>  桂花</li>
   <li><i>Osmanthus heterophyllus</i>  異葉木犀</li>
   <li><i>Osmanthus integrifolius</i>  圓葉木犀</li>
   <li><i>Osmanthus kaoi</i>  高氏木犀</li>
@@ -28613,11 +28785,11 @@
     </d:entry>
 <d:entry id="Osmanthus_fragrans" d:title="Osmanthus fragrans">
         <d:index d:value="Osmanthus fragrans"/>
-        <d:index d:value="木犀"/>
-    <d:index d:value="桂花"/>
+        <d:index d:value="桂花"/>
+    <d:index d:value="木犀"/>
         <h2><i>Osmanthus fragrans</i> Lour.</h2>
         科名：木犀科 Oleaceae<br/>
-        中名：木犀 桂花<br/>
+        中名：桂花 木犀<br/>
     </d:entry>
 <d:entry id="Osmanthus_heterophyllus" d:title="Osmanthus heterophyllus">
         <d:index d:value="Osmanthus heterophyllus"/>
@@ -44088,6 +44260,7 @@
 </ol>
 <i>Ixora</i> 仙丹花屬
 <ol>
+  <li><i>Ixora duffii</i>  大王仙丹</li>
   <li><i>Ixora philippinensis</i>  小仙丹花</li>
   <li><i>Ixora williamsii</i>  矮仙丹花</li>
 </ol>
@@ -44560,6 +44733,14 @@
         <h2><i>Hemidiodia ocimifolia</i> (Willd.) Schum.</h2>
         科名：茜草科 Rubiaceae<br/>
         中名：擬鴨舌癀舅<br/>
+    </d:entry>
+<d:entry id="Ixora_duffii" d:title="Ixora duffii">
+        <d:index d:value="Ixora duffii"/>
+        <d:index d:value="大王仙丹"/>
+    <d:index d:value="大花仙丹"/>
+        <h2><i>Ixora duffii</i> T. Moore</h2>
+        科名：茜草科 Rubiaceae<br/>
+        中名：大王仙丹 大花仙丹<br/>
     </d:entry>
 <d:entry id="Ixora_philippinensis" d:title="Ixora philippinensis">
         <d:index d:value="Ixora philippinensis"/>
@@ -46527,7 +46708,6 @@
 <ol>
   <li><i>Smilax arisanensis</i>  阿里山菝契</li>
   <li><i>Smilax bockii</i>  土茯苓</li>
-  <li><i>Smilax bockii</i>  平柄菝契</li>
   <li><i>Smilax bracteata</i>  假菝契</li>
   <li><i>Smilax bracteata</i> var. <i>verruculosa</i>  糙莖菝契</li>
   <li><i>Smilax china</i>  菝契</li>
@@ -46559,21 +46739,15 @@
         科名：菝契科 Smilacaceae<br/>
         中名：阿里山菝契<br/>
     </d:entry>
-<!--d:entry id="Smilax_bockii" d:title="Smilax bockii">
+<d:entry id="Smilax_bockii" d:title="Smilax bockii">
         <d:index d:value="Smilax bockii"/>
         <d:index d:value="土茯苓"/>
     <d:index d:value="南蠻土茯苓"/>
     <d:index d:value="阿里山土茯苓"/>
+    <d:index d:value="平柄菝契"/>
         <h2><i>Smilax bockii</i> Warb.</h2>
         科名：菝契科 Smilacaceae<br/>
-        中名：土茯苓 南蠻土茯苓 阿里山土茯苓<br/>
-    </d:entry-->
-<d:entry id="Smilax_bockii" d:title="Smilax bockii">
-        <d:index d:value="Smilax bockii"/>
-            <d:index d:value="平柄菝契"/>
-        <h2><i>Smilax bockii</i> Warb.</h2>
-        科名：菝契科 Smilacaceae<br/>
-        中名：平柄菝契<br/>
+        中名：土茯苓 南蠻土茯苓 阿里山土茯苓 平柄菝契<br/>
     </d:entry>
 <d:entry id="Smilax_bracteata" d:title="Smilax bracteata">
         <d:index d:value="Smilax bracteata"/>
@@ -48152,7 +48326,7 @@
   <li><i>Cyclosorus papilio</i>  薄葉梳毛蕨</li>
   <li><i>Cyclosorus parasiticus</i>  密毛毛蕨</li>
   <li><i>Cyclosorus subpubescens</i>  梳毛蕨</li>
-  <li><i>Cyclosorus taiwanensis</i>  臺灣毛蕨</li>
+  <li><i>Cyclosorus taiwanensis</i>  臺灣圓腺蕨</li>
   <li><i>Cyclosorus truncatus</i>  大葉毛蕨</li>
   <li><i>Cyclosorus × intermedius</i>  擬密毛毛蕨</li>
 </ol>
@@ -48324,11 +48498,11 @@
     </d:entry>
 <d:entry id="Cyclosorus_taiwanensis" d:title="Cyclosorus taiwanensis">
         <d:index d:value="Cyclosorus taiwanensis"/>
-        <d:index d:value="臺灣毛蕨"/>
-    <d:index d:value="臺灣圓腺蕨"/>
+        <d:index d:value="臺灣圓腺蕨"/>
+    <d:index d:value="臺灣毛蕨"/>
         <h2><i>Cyclosorus taiwanensis</i> (C. Chr.) H. Ito</h2>
         科名：金星蕨科 Thelypteridaceae<br/>
-        中名：臺灣毛蕨 臺灣圓腺蕨<br/>
+        中名：臺灣圓腺蕨 臺灣毛蕨<br/>
     </d:entry>
 <d:entry id="Cyclosorus_truncatus" d:title="Cyclosorus truncatus">
         <d:index d:value="Cyclosorus truncatus"/>

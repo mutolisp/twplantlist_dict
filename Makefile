@@ -12,6 +12,7 @@ DICT_NAME		=	"Plant List of Taiwan"
 DICT_SRC_PATH		=	twplantlist.xml
 CSS_PATH		=	twplantlist.css
 PLIST_PATH		=	MyInfo.plist
+PYTHON			= /usr/local/bin/python3
 
 DICT_BUILD_OPTS		=
 # Suppress adding supplementary key.
