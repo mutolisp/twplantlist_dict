@@ -82,13 +82,17 @@ def main():
             with conn.cursor() as curs:
                 curs.execute(GET_GENUS_SQL)
                 genus_list = curs.fetchall()
+        expf.write(u'# 代表特有種，* 為歸化種，† 為栽培種<p/>')
         for gsp in range(len(genus_list)):        
             ### SPECIES
             GET_SP_SQL = '''
                 SELECT 
-                    name,fullname,zh_name 
+                    n.name,n.fullname,n.zh_name,i.category,n.endemic,n.source
                 FROM 
-                    nomenclature.namelist
+                    nomenclature.namelist n
+                LEFT OUTER JOIN 
+                    nomenclature.iucn_redlist i
+                ON n.name = i.name
                 WHERE 
                     genus_apg3 = '%s'
                 ORDER BY name;
@@ -96,14 +100,37 @@ def main():
             with conn:
                 with conn.cursor() as curs:
                     curs.execute(GET_SP_SQL)
-                    sp_list = curs.fetchall()            
-            expf.write('<i>%s</i> %s\n' % (genus_list[gsp][0], genus_list[gsp][1]))
+                    sp_list = curs.fetchall()
+            ### species list within a genus
+            expf.write(u'<i>%s</i> %s\n' % (genus_list[gsp][0], genus_list[gsp][1]))
             expf.write('<ol>\n')
             for sp_in_fam in range(len(sp_list)):
-                if sp_in_fam == 0:
-                    GENUS_SP_LIST = '  <li>' + fmtname(sp_list[sp_in_fam][0])                                     + ' ' + sp_list[sp_in_fam][2][0] + '</li>\n'
+                # check for endemic and iucn
+                if sp_list[sp_in_fam][3] is not None:
+                    IUCN_CAT = ' (' + sp_list[sp_in_fam][3] + ')'
+                else: 
+                    IUCN_CAT = ''
+                if sp_list[sp_in_fam][4] == 1:
+                    ENDEMIC = ' #'
                 else:
-                    GENUS_SP_LIST = GENUS_SP_LIST + '  <li>' + fmtname(sp_list[sp_in_fam][0])                                     + ' ' + sp_list[sp_in_fam][2][0] + '</li>\n'
+                    ENDEMIC = ''
+                if sp_list[sp_in_fam][5] is not None:
+                    if sp_list[sp_in_fam][5] == u'歸化':
+                        SOURCE = ' *'
+                    elif sp_list[sp_in_fam][5] == u'栽培':
+                        SOURCE = ' †'
+                else:
+                    SOURCE = ''
+                # add entries of each species in a genus
+                if sp_in_fam == 0:
+                    GENUS_SP_LIST = '  <li>' + fmtname(sp_list[sp_in_fam][0]) + ' ' + sp_list[sp_in_fam][2][0] + ENDEMIC + SOURCE + IUCN_CAT + '</li>\n'
+                else:
+                    GENUS_SP_LIST = GENUS_SP_LIST + '  <li>' + fmtname(sp_list[sp_in_fam][0]) + ' ' + sp_list[sp_in_fam][2][0] + \
+                    ENDEMIC + SOURCE + IUCN_CAT + '</li>\n'
+                # clean variables
+                IUCN_CAT = ''
+                ENDEMIC = ''
+                SOURCE = ''
             expf.write(GENUS_SP_LIST)
             expf.write('</ol>\n')
         FAM_ENTRY_BACK = '''</d:entry>'''
@@ -111,9 +138,12 @@ def main():
         # each species
         GET_SPALL_SQL = '''
                 SELECT 
-                    name,fullname,zh_name 
+                    n.name,n.fullname,n.zh_name,i.category,i.criteria,n.endemic
                 FROM 
-                    nomenclature.namelist
+                    nomenclature.namelist n 
+                LEFT OUTER JOIN 
+                    nomenclature.iucn_redlist i
+                ON n.name = i.name
                 WHERE 
                     family_apg3 = '%s'
                 ORDER BY name;
@@ -153,9 +183,27 @@ def main():
         <h2>%s</h2>
         科名：%s<br/>
         中名：%s<br/>
-    </d:entry>''' % ( SPID, SPNAME_NO_AUTHOR, SPNAME_NO_AUTHOR, \
+        <p/>
+        <div id="attribute">''' % ( SPID, SPNAME_NO_AUTHOR, SPNAME_NO_AUTHOR, \
             SP_ZHNAME_VAL, SPNAME_W_AUTHOR, SP_FAM, SP_ZHNAME)
-            expf.write(SP_ENTRY + '\n')
+            # iucn redlist and endemic
+            if sp_list_all[s][3] is not None:
+                if sp_list_all[s][4] is not None:
+                    IUCN_CAT = 'IUCN 評估等級 (評估準則)：' + sp_list_all[s][3] + ' (' + sp_list_all[s][4] + ')' + '<p/>'
+                else:
+                    IUCN_CAT = 'IUCN 評估等級 (評估準則)：' + sp_list_all[s][3] + '<p/>'
+            else:
+                IUCN_CAT = ''
+            if sp_list_all[s][5] == 1:
+                ENDEMIC = '臺灣特有種<p/>'
+            else:
+                ENDEMIC = ''
+            expf.write(SP_ENTRY + IUCN_CAT + ENDEMIC + '    </div>\n')
+            expf.write('    </d:entry>\n')
+            # clean variables
+            IUCN_CAT = ''
+            ENDEMIC = ''
+            SOURCE = ''
     FRONT_BACK_MATTER='''<d:entry id="front_back_matter" d:title="Front/Back Matter">
         <h1><b>Plant list of Taiwan</b></h1>
         <h2>Front/Back Matter</h2>

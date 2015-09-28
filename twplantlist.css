@@ -2,18 +2,26 @@
 @namespace d url(http://www.apple.com/DTDs/DictionaryService-1.0.rng);
 
 d|entry {
+    font-family: Helvetica Neue, Arial Narrow, Noto Sans T Chinese DemiLight;
 }
 
 h2	{
 	font-size: 100%;
+    font-family: Helvetica Neue, Arial Narrow, Noto Sans T Chinese DemiLight;
 }
 
 h3	{
 	font-size: 100%;
+    font-family: Helvetica Neue, Arial Narrow, Noto Sans T Chinese DemiLight;
+}
+
+div#attribute {
+    font-family: Helvetica Neue, Arial Narrow, Noto Sans T Chinese DemiLight;
 }
 
 span.column {
 	display: block;
+    font-family: Arial Narrow, Noto Sans T Chinese DemiLight;
 	border: solid 2px #c0c0c0;
 	margin-left: 2em;
 	margin-right: 2em;
